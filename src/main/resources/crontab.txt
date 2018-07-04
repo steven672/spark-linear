@@ -1,0 +1,11 @@
+SPARK_HOME=/usr/local/spark
+SPARK_MASTER=spark://96.116.56.39:7077
+CLASSPATH=:/usr/local/spark/jars
+SCALA_HOME=/usr/share/scala/bin
+PATH=/opt/hadoop-2.7.4/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/centos/.local/bin:/home/centos/bin:/home/centos/.local/bin:/home/centos/bin:/home/centos/bin:/usr/local/spark/bin:/usr/share/scala/bin
+40 * * * * /bin/bash /home/centos/splunk/hourly_super8.sh &> /home/centos/super8test.log
+0 * * * * /bin/bash /home/centos/splunk/hourly_pillar.sh &> /home/centos/pillartest.log
+20 * * * * /bin/bash /home/centos/splunk/hourly_varnish.sh &> /home/centos/varnishtest.log
+30 * * * * /bin/bash /home/centos/splunk/hourly_manifest_agent.sh &> /home/centos/matest.log
+10 1 * * * /bin/bash /home/centos/splunk/linear_archive_retention.sh linear
+10 1 * * * /bin/bash /home/centos/splunk/linear_archive_retention.sh rio

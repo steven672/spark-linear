@@ -1,0 +1,22 @@
+target
+*.class
+build
+.classpath
+.project
+.settings
+org.scala-ide.sdt.core/META-INF/MANIFEST.MF
+org.scala-ide.sdt.update-site/site.xml
+.DS_Store
+/bin/
+*.iml
+*.ipr
+*.iws
+.idea
+out
+.cache-main
+.cache-tests
+*.csv
+## remove config credentials
+src/main/resources/hourly*
+src/main/scala/database.*
+src/main/scala/Splunk*
